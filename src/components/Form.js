@@ -31,6 +31,7 @@ class Form extends React.Component {
         </label>
         <label htmlFor="descriptionCard">
           <textarea
+            type="textarea"
             data-testid="description-input"
             id="descriptionCard"
             name="cardDescription"
@@ -40,6 +41,7 @@ class Form extends React.Component {
         </label>
         <label htmlFor="attr1">
           <input
+            type="number"
             data-testid="attr1-input"
             id="attr1"
             name="cardAttr1"
@@ -49,6 +51,7 @@ class Form extends React.Component {
         </label>
         <label htmlFor="attr2">
           <input
+            type="number"
             data-testid="attr2-input"
             id="attr2"
             name="cardAttr2"
@@ -58,6 +61,7 @@ class Form extends React.Component {
         </label>
         <label htmlFor="attr3">
           <input
+            type="number"
             data-testid="attr3-input"
             id="attr3"
             name="cardAttr3"
@@ -67,6 +71,7 @@ class Form extends React.Component {
         </label>
         <label htmlFor="urlImage">
           <input
+            type="text"
             data-testid="image-input"
             id="urlImage"
             name="cardImage"
@@ -91,6 +96,7 @@ class Form extends React.Component {
         <label htmlFor="super">
           SuperTrunfo
           <input
+            type="checkbox"
             data-testid="trunfo-input"
             id="superTrunfo"
             name="cardTrunfo"

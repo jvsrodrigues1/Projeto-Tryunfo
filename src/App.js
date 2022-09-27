@@ -7,15 +7,14 @@ class App extends React.Component {
     this.state = {
       cardName: '',
       cardDescription: '',
-      cardAttr1: '0',
-      cardAttr2: '0',
-      cardAttr3: '0',
+      cardAttr1: '',
+      cardAttr2: '',
+      cardAttr3: '',
       cardImage: '',
-      cardRare: 'normal',
+      cardRare: '',
       cardTrunfo: false,
       hasTrunfo: false,
       isSaveButtonDisabled: true,
-
     };
   }
 
