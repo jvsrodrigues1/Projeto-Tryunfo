@@ -19,6 +19,16 @@ class App extends React.Component {
     };
   }
 
+  onInputChange = (event) => {
+    const { name, type, checked } = event.target;
+    const value = type === 'checkbox' ? checked : event.target.value;
+    this.setState({
+      [name]: value,
+    });
+  };
+
+  onSaveButtonClick = () => {};
+
   render() {
     const {
       cardName,
@@ -46,6 +56,8 @@ class App extends React.Component {
           cardTrunfo={ cardTrunfo }
           hasTrunfo={ hasTrunfo }
           isSaveButtonDisabled={ isSaveButtonDisabled }
+          onInputChange={ this.onInputChange }
+          onSaveButtonClick={ this.onSaveButtonClick }
         />
       </div>
     );
