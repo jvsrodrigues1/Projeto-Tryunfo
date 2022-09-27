@@ -23,7 +23,7 @@ class App extends React.Component {
     const { name, type, checked } = event.target;
     const value = type === 'checkbox' ? checked : event.target.value;
     this.setState({
-      [name]: value }, () => this.inputValidation);
+      [name]: value }, () => this.inputValidation());
   };
 
   isInputValid = () => {
@@ -31,9 +31,7 @@ class App extends React.Component {
     const isCardName = cardName.length > 0;
     const isCardDescription = cardDescription.length > 0;
     const isCardImage = cardImage.length > 0;
-    if (isCardName && isCardDescription && isCardImage) {
-      return true;
-    }
+    return isCardName && isCardDescription && isCardImage;
   };
 
   isInputNumberValid = () => {
@@ -53,18 +51,15 @@ class App extends React.Component {
     && Number(cardAttr2) >= 0
     && Number(cardAttr3) >= 0;
 
-    if (isSumValid && maxValuesCard && verifyNegativeValue) {
-      return true;
-    }
+    return isSumValid && maxValuesCard && verifyNegativeValue;
   };
 
   inputValidation = () => {
     if (this.isInputValid() && this.isInputNumberValid()) {
       this.setState({ isSaveButtonDisabled: false });
-      return;
+    } else {
+      this.setState({ isSaveButtonDisabled: true });
     }
-
-    this.setState({ isSaveButtonDisabled: true });
   };
 
   onSaveButtonClick = () => {};
